@@ -76,11 +76,11 @@ const AboutSection = () => {
             className="relative"
           >
             <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-              <div className="bg-gradient-to-br from-blue-500 to-blue-700 w-full h-full flex items-center justify-center">
+              <div className="w-full h-full flex items-center justify-center">
                 <img
-                  src="/api/placeholder/600/400"
+                  src="/src/assets/safemax_image.png"
                   alt="Cybersecurity Operations"
-                  className="object-cover rounded-lg opacity-75"
+                  className="w-[400px] h-[400px]"
                 />
               </div>
             </div>
