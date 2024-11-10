@@ -78,7 +78,7 @@ const AboutSection = () => {
             <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
               <div className="w-full h-full flex items-center justify-center">
                 <img
-                  src="/src/assets/safemax_image.png"
+                  src="/src/assets/safemax_image.jpeg"
                   alt="Cybersecurity Operations"
                   className="w-[400px] h-[400px]"
                 />
