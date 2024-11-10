@@ -11,7 +11,7 @@ const AdminCMS = () => {
   const fetchAppointments = async () => {
     try {
       const response = await fetch(
-        "https://safe-github-dld2.vercel.app/api/appointments/list/"
+        "https://appointment-project-0vlk.onrender.com/api/appointments/list/"
       );
       if (!response.ok) throw new Error(`Error: ${response.status}`);
       const data = await response.json();
@@ -24,7 +24,7 @@ const AdminCMS = () => {
   const handleStatusChange = async (id, status) => {
     try {
       await fetch(
-        `https://safe-github-dld2.vercel.app/api/appointments/${id}/`,
+        `https://appointment-project-0vlk.onrender.com/api/appointments/${id}/`,
         {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },

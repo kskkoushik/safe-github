@@ -16,7 +16,7 @@ const AppointmentForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await fetch(
-      "https://safe-github-dld2.vercel.app/api/appointments/",
+      "https://appointment-project-0vlk.onrender.com/api/appointments/",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
