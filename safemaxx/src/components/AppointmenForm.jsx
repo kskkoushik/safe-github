@@ -15,11 +15,14 @@ const AppointmentForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:8000/api/appointments/", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
+    const response = await fetch(
+      "https://safe-github-dld2.vercel.app/api/appointments/",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      }
+    );
     if (response.ok) {
       alert("Appointment request submitted successfully.");
       setFormData({ name: "", email: "", dateTime: "", comments: "" });

@@ -11,7 +11,7 @@ const AdminCMS = () => {
   const fetchAppointments = async () => {
     try {
       const response = await fetch(
-        "http://localhost:8000/api/appointments/list/"
+        "https://safe-github-dld2.vercel.app/api/appointments/list/"
       );
       if (!response.ok) throw new Error(`Error: ${response.status}`);
       const data = await response.json();
@@ -23,11 +23,14 @@ const AdminCMS = () => {
 
   const handleStatusChange = async (id, status) => {
     try {
-      await fetch(`http://localhost:8000/api/appointments/${id}/`, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ status }),
-      });
+      await fetch(
+        `https://safe-github-dld2.vercel.app/api/appointments/${id}/`,
+        {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ status }),
+        }
+      );
       fetchAppointments(); // Refresh the list after status update
     } catch (error) {
       console.error("Failed to update status:", error);

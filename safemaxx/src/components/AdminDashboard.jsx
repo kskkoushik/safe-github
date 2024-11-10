@@ -10,7 +10,9 @@ const AdminDashboard = () => {
 
   const fetchAppointments = async () => {
     try {
-      const response = await fetch("http://localhost:8000/api/appointments/");
+      const response = await fetch(
+        "https://safe-github-dld2.vercel.app/api/appointments/"
+      );
       const data = await response.json();
       setAppointments(data);
       setLoading(false);
@@ -23,7 +25,7 @@ const AdminDashboard = () => {
   const updateAppointmentStatus = async (id, status) => {
     try {
       await fetch(
-        `http://localhost:8000/api/appointments/${id}/update_status/`,
+        `https://safe-github-dld2.vercel.app/api/appointments/${id}/update_status/`,
         {
           method: "POST",
           headers: {
